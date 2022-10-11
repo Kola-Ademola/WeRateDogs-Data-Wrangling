@@ -57,7 +57,7 @@ the twitter_archive dataset
 the image predictions
 
 
-After spotting all the above issues with the datasets I moved on to use the following steps in
+### After spotting all the above issues with the datasets I moved on to use the following steps in
 cleaning the data and getting it ready for analysis
 
 * I made a copy of all the datasets first.
