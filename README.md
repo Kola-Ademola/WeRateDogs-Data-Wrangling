@@ -35,65 +35,64 @@ dataset.
 1. Drop the columns with too many null values
 (in_reply_to_status_id, in_reply_to_user_id, retweeted_status_id, retweeted_st
 atus_user_id, retweeted_status_timestamp) as they won’t be neccesary
-
+![](images/issue1.png)
+![](images/issue1_2.png)
 2. Missing values represented as "None" instead of "NaN" in
 the twitter_archive dataset
-
+![](images/issue2.png)
+![](images/issue2_2.png)
 3. timestamp & retweeted_status_timestamp as object instead of datetime in
 the twitter_archive dataset
-
+![](images/issue3.png)
+![](images/issue)
 4. in_reply_to_status_id, retweeted_status_id, retweeted_user_id & in_reply_to_u
 ser_id as float instead of int in the twitter_archive dataset
-
+![](images/issue4.png)
 5. The source column should be of type category instead of object in
 the twitter_archive dataset
-
+![](images/issue5.png)
 6. The source column needs to be sliced to get the actual source of the tweet rather
 than the whole HTML
-
+![](images/issue6.png)
 7. The ratin_numerator & rating_denominator has values outside the 15/10 rating
 standard
-
+![](images/issue7.png)
 8. We don't need the exact time of the tweet in the twitter_archive dataset, the date is
 okay
-
-9. We have predicions of False and we need just True values since it’s for dogs in
-the image_predictions dataset
-
-10. Inconsistent dog type name predictions in the image_predictions dataset
-
-
+![](images/issue8.png)
+![](images/issue8_2.png)
+9. Inconsistent dog type name predictions in the image_predictions dataset
+![](images/issue9.png)
+___
 ## Here are the Tidiness issues I spotted after assessing the data also:
 
 1. The dog categories should be a categorical variable in a single column rather than 4
 columns in the twitter_archive dataset
-
+![](images/tidy1.png)
+![](images/tidy1_2.png)
 2. Retweeted posts not needed for this projected, should be deleted from
 the twitter_archive dataset
-
+![](images/tidy2.png)
+![](images/tidy2_2.png)
 3. We need just 2 tables ie One with the whole tweet info
 (joining twitter_archive & tweet_info on tweet_id) and the second table should be
 the image predictions
+![](images/tidy3.png)
 
-
-### After spotting all the above issues with the datasets I moved on to use the following steps in
-cleaning the data and getting it ready for analysis
-
-* I made a copy of all the datasets first.
-Then for the Quality issues I:
-
-* This columns(in_reply_to_status_id, in_reply_to_user_id, retweeted_status_id, retwe
-eted_status_user_id, retweeted_status_timestamp) won’t be necessary for this
-project and coupled with having too many null values they need to be dropped
-
-* I'll be replacing the "None" with NaN so it can be used properly during analysis or
-further cleaning in the twitter_archive dataset
-
-
-# Insights:
-
+___
+## ANALYSIS & CONCLUSIONS
+___
 * There's a strong positive correlation between the number of likes and retweets but we musnt take this as causality.
-
+___LIKE VS RETWEETS___
+![](images/viz1.png)
+___
 * The tweets from iPhone seem to get most likes & retweets but this can also be due to the fact that most of the tweets were from iPhones.
-
+___LIKE VS RETWEETS BY TWEET SOURCE___
+![](images/viz2.png)
+___
 * The dog with the higher ratings had more retweets and likes from my analysis but we should take into account of those with the rating of 15 as they were having very low likes and retweets also.
+___LIKE VS RETWEETS BY RATING___
+![](images/viz3.png)
+___
+
+___DISCLAIMER:::::___ Proper analysis of the tweets were not done as this project was just purely focused on honing my data wrangling & cleaning skills.
