@@ -12,16 +12,24 @@ ___
 For this project I got my data from multiple sources(twitter api & downloaded tsv file online).  
 The data contains info on the tweets gotten from the @WeRateDogs twitter account about dogs and their ratings. This data has alot of quality issues which you'll be seeing how I solved or wrangled the data making it clean and ready for my analysis.
 
-I started by downloading the dataset necessary for this project both programmatically and directly
-from the web and then I also scraped data using the twitter API.
-![](images/api.png)
-After downloading and loading my datasets, I moved on to importing the necessary librabries
-needed for wrangling and cleaning the data. I visually assessing and programmatically assessing the
-data and right off the bat I spotted some Quality issues in the twitter_archive and image_predictions
-dataset. 
+* I started by downloading the dataset necessary for this project both programmatically and directly
+from the web;  
+___TWITTER ARCHIVE DATASET___
+![](images/twitter_archive_df.png)
+___IMAGE PREDICTIONS DATASET___
+![](images/image_pred_df.png)
+* And then I also scraped data using the twitter API.
+![](images/tweet_api1.png)
+___SCRAPED TWEETS USING THE TWITTER API___
+![](images/tweet_api2.png)
 ___
 ## SKILLS DEMONSTRATED & DATA TRANSFORMATION
 ___
+After downloading and loading my datasets, I moved on to importing the necessary librabries needed for wrangling and cleaning the data.
+___LIBRARIES USED___
+![](images/libs.png)
+I visually assessing and programmatically assessing the data and right off the bat I spotted some Quality issues in the twitter_archive and image_predictions
+dataset. 
 ## The Quality issues I spotted are as follows:
 
 1. Drop the columns with too many null values
